@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const User = sequelize.define('User', {
+    const Users = sequelize.define('User', {
         name: DataTypes.STRING,
         nick: {
             type: DataTypes.STRING,
@@ -15,5 +15,5 @@ module.exports = (sequelize, DataTypes) => {
         birth: DataTypes.DATEONLY
     });
 
-    return User;
+    return Users;
 };

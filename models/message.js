@@ -1,13 +1,14 @@
 module.exports = (sequelize, DataTypes) => {
-    const Message = sequelize.define('Message', {
+    const Messages = sequelize.define('Message', {
         message: DataTypes.TEXT,
-
+        userId: DataTypes.INTEGER,
+        roomId: DataTypes.INTEGER
     });
 
-    Message.associate = function(models) {
-        Message.belongsTo(models.Room, {foreignKey: 'roomId', as: 'room'})
-        Message.belongsTo(models.User, {foreignKey: 'userId', as: 'user'})
+    Messages.associate = function(models) {
+        Messages.hasOne(models.Room, {foreignKey: 'id', as: 'room'})
+        Messages.hasOne(models.User, {foreignKey: 'id', as: 'user'})
     };
 
-    return Message;
+    return Messages;
 };

@@ -21,7 +21,9 @@
   "_moduleAliases": {
     "@root": ".",
     "@models": "models/",
-    "@services": "services/"
+    "@services": "app/services/",
+    "@controllers": "app/controllers/",
+    "@routes": "routes/"
   },
   "devDependencies": {
     "sequelize-auto-migrations": "^1.0.3"

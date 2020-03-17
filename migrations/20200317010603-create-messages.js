@@ -6,29 +6,29 @@ module.exports = {
       primaryKey: true,
       type: Sequelize.INTEGER,
     },
-    messages: {
+    message: {
       allowNull: false,
       type: Sequelize.TEXT,
     },
     roomId: {
       type: Sequelize.INTEGER,
       references: {
-        model: "Room",
+        model: "Rooms",
         key: "id"
       }
     },
     userId: {
       type: Sequelize.INTEGER,
       references: {
-        model: "User",
+        model: "Users",
         key: "id"
       }
     },
-    created_at: {
+    createdAt: {
       allowNull: false,
       type: Sequelize.DATE,
     },
-    updated_at: {
+    updatedAt: {
       allowNull: false,
       type: Sequelize.DATE,
     },

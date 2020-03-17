@@ -1,0 +1,14 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./../chat.db"
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "./../chat.db"
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "./../chat.db"
+  }
+}

@@ -1,3 +1,4 @@
+const io = require("../../bin/www")
 const models = require('@models');
 const Messages = models.Message
 const User = models.User

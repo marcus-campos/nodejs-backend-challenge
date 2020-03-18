@@ -85,11 +85,9 @@ function onError(error) {
 /**
  * Event listener for Socket server "listening" event.
  */
-const roomChannel = require("@routes/socket/room")
+const roomChannel = require("@routes/socket/events")
 
-io.on('connection', function(socket){
-  roomChannel(socket)
-});
+roomChannel(io)
 
 
 /**

@@ -7,6 +7,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import socket from './../../services/socket'
 
 export default function GuestModal({ open, handleClose, roomId }) {
   const history = useHistory();
@@ -15,6 +16,7 @@ export default function GuestModal({ open, handleClose, roomId }) {
   const handleSubmit = () => {
     // const username = localStorage.getItem('@multiplan_username');
     // if(!username){
+    socket.emit('join', { name, type: "guest", room: roomId })
     localStorage.setItem('@multiplan_username', name)
     localStorage.setItem('@multiplan_type', 'guest')
     // }

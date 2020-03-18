@@ -20,7 +20,7 @@ export default function List({rooms}) {
     <Container>
       {rooms.map(room => (
         <ListItem key={room.id} onClick={() => handleClickOpen(room.id)}>
-          <ColorIdentifier color={"#ED659A"} />
+          <ColorIdentifier color={"#00ff00"} />
           <Info>
             <Name>{room.name}</Name>
             <ActionButtons></ActionButtons>

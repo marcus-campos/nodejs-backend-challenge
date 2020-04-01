@@ -15,5 +15,9 @@ module.exports = (sequelize, DataTypes) => {
         birth: DataTypes.DATEONLY
     });
 
+    Users.associate = function(models) {
+        Users.hasMany(models.Message, {foreignKey: 'id', as: 'messages'})
+    };
+
     return Users;
 };

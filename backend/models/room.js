@@ -6,5 +6,9 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
 
+    Rooms.associate = function(models) {
+        Rooms.hasMany(models.Message)
+    };
+
     return Rooms;
 };

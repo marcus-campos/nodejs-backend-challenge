@@ -1,5 +1,9 @@
-import socketIOClient from "socket.io-client"; 
+// import io from "socket.io-client"; 
 
-const socket = socketIOClient("http://localhost:3001/room-1");
-
-export default socket
+// export default class Socket {
+//   constructor(roomId){
+//     this.client = io(''{
+//       path: `/${roomId}`
+//     })
+//   }
+// }

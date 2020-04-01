@@ -6,8 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     Messages.associate = function(models) {
-        Messages.hasOne(models.Room, {foreignKey: 'id', as: 'room'})
-        Messages.hasOne(models.User, {foreignKey: 'id', as: 'user'})
+        Messages.belongsTo(models.Room, {foreignKey: 'roomId', as: "room"})
+        Messages.belongsTo(models.User, {foreignKey: 'userId', as: "user"})
     };
 
     return Messages;

@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  height: 400px;
+  height: 100%;
   margin-top: 16px;
+  overflow-y: scroll;
 `;
 
 export const ListItem = styled.div`

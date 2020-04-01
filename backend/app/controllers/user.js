@@ -13,8 +13,11 @@ class UserController {
 
   async store(req, res) {
     try {
-      const user = await User.create(req.body);
-      return res.json(user);
+      const user = await User.findOrCreate({
+        where: { nick: req.body.nick },
+        defaults: req.body
+      });
+      return res.json(user[0]);
     } catch (err) {
       return res.status(400).json({ error: err.message });
     }
